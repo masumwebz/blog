@@ -1,0 +1,8 @@
+# to create app run this command
+
+python manage.py startapp blog
+
+
+#register app to project settings.py
+
+'blog',

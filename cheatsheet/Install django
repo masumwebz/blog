@@ -1,6 +1,13 @@
 # install Django run command
+# this command will install django in current directory
 
-django-admin startproject blogwebsite .
+django-admin startproject projectname .
 
-# this command will install django in current directory 
+ 
+
+#runserver command
+python manage.py runserver
+
+
+
 
