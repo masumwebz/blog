@@ -6,3 +6,45 @@ python manage.py startapp blog
 #register app to project settings.py
 
 'blog',
+
+
+
+#url mapping for app 
+
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls'))
+]
+
+
+
+
+
+#create urls.py into app directory
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='blog-home'),
+]
+
+
+
+
+# create views function for this url
+
+from django.shortcuts import render
+
+# Create your views here.
+def home(request):
+    return render(request, 'index.html')
+
+
+
+#create templates/index.html & put some html output
+#done
+
