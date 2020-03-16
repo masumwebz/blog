@@ -1,0 +1,41 @@
+#template override
+#go to settings.py & update DIRS lines to ...
+
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
+
+#base html file
+
+{% block content %}
+        
+{% endblock %}
+
+
+
+#other html file
+
+{% extends "base.html" %}
+
+{% block content %}
+  <h3>hello</h3>
+{% endblock  %}
+
+
+
+#static files manage
+
+#go to settings.py at bottom put this code
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+
+]
+
+
+#make a folder static named
+
+# to present this media in html 
+
+{% load static %}
+<img src="{% static "images/profile.png" %}" alt="My image">
