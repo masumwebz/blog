@@ -41,6 +41,9 @@ class Musician(models.Model):
         return self.first_name
 
 class Album(models.Model):
-    artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+    artist = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.artist
 

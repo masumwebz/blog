@@ -1,5 +1,6 @@
-{% for album in albums %}
-    <p> {{ album.name }} </p>
+{% for albums in album %}
+    <p> {{ albums.name }} </p>
+    <p> {{ albums.artist }} </p>
 {% endfor %} 
 
 <form method="POST" action="">

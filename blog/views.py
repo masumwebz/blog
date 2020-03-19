@@ -36,15 +36,16 @@ def register(request):
 
 #album views
 def album(request):
-    albums = Album.objects.all()
+    album = Album.objects.all()
     form = AlbumForm()
 
     if request.method =='POST':
         form = AlbumForm(request.POST)
         if form.is_valid():
-           # albums.artist = request.user
+            #album= form.save(commit=False)
+            #album.artist = request.user
             form.save()
         return redirect('album-list')
 
-    context = {'albums':albums, 'form':form}
+    context = {'album':album, 'form':form}
     return render(request, 'tasks/album.html', context)
