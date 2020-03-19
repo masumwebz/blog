@@ -1,0 +1,9 @@
+{% for album in albums %}
+    <p> {{ album.name }} </p>
+{% endfor %} 
+
+<form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <input class="btn btn-info" type="submit" name="Create Task">
+    </form>

@@ -1,0 +1,9 @@
+{% for task in tasks %}
+    <p> {{ task.title }} </p>
+{% endfor %} 
+
+<form method="POST" action="">
+        {% csrf_token %}
+        {{form.title}}
+        <input class="btn btn-info" type="submit" name="Create Task">
+    </form>
