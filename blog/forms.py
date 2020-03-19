@@ -28,5 +28,5 @@ class AlbumForm(forms.ModelForm):
 
     class Meta:
         model = Album
-        exclude = ['release_date']
+        exclude = ['release_date','artist']
                 #fields = '__all__'

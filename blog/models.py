@@ -45,5 +45,5 @@ class Album(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.artist
+        return self.name
 

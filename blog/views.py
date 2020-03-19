@@ -42,9 +42,13 @@ def album(request):
     if request.method =='POST':
         form = AlbumForm(request.POST)
         if form.is_valid():
-            #album= form.save(commit=False)
-            #album.artist = request.user
-            form.save()
+            # album= form.save(commit=False)
+            # album.artist = request.user
+            # form.save()
+            instance = form.save(commit=False)
+            instance.artist = request.user
+            instance.save()
+
         return redirect('album-list')
 
     context = {'album':album, 'form':form}
