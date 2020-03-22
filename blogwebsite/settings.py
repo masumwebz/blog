@@ -133,3 +133,6 @@ STATICFILES_DIRS = [
 
 ]
 
+
+#to upload profile pic this code need
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')

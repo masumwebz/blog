@@ -45,7 +45,7 @@
         </div>
     </div>
     {% endcomment %}
-    
+
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -54,6 +54,8 @@
 
 </form>
 
+{% comment %} uploded image for profile pic code {% endcomment %}
+<img src="{{ request.user.userprofile.profile_pic.url}}">
 
 
 {% endblock content %}
