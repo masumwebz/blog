@@ -67,8 +67,13 @@
               </li>
               <li class="nav-item"><a href="post.html" class="nav-link ">Post</a>
               </li>
-              <li class="nav-item"><a href="{%url 'logout'%}" class="nav-link ">logout</a>
+              {% if user.is_authenticated %}
+                <li class="nav-item"><a href="{%url 'logout'%}" class="nav-link ">logout</a>
               </li>
+              {% else %}
+                <li class="nav-item"><a href="{%url 'logout'%}" class="nav-link ">login</a> </li>
+              {% endif %}
+              
             </ul>
             <div class="navbar-text"><a href="#" class="search-btn"><i class="icon-search-1"></i></a></div>
             <ul class="langs navbar-text"><a href="#" class="active">EN</a><span>           </span><a href="#">ES</a></ul>

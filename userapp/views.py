@@ -47,6 +47,7 @@ def register(request):
 
             profile.save()
 
+            #after create profile this code block will logged in
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password)
