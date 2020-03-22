@@ -5,7 +5,7 @@
 {% block content %}
 
 
-    <div class="container mt-5">
+    {% comment %} <div class="container mt-5">
         <div class="row">
             <div class="col-md-6 offset-3">
                 {% for message in messages %}
@@ -32,6 +32,8 @@
                      <div class="form-group">
                         {{ form.first_name|add_class:"form-control" }}
                     </div>
+
+                    {{ profileform}}
                     
 
                     <div class="form-group">
@@ -42,7 +44,14 @@
             </div>
         </div>
     </div>
-   
+    {% endcomment %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ profile_form.as_p }}
+    <input type="submit" name="submit">
+
+</form>
 
 
 

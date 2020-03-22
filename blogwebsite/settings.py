@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'widget_tweaks',
     'crispy_forms',
+    'userapp'
     
 ]
 
