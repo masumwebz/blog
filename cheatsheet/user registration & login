@@ -1,0 +1,13 @@
+# ইউজার রেজিস্টার ও লগইন
+
+
+# 1. create a model form by default User model
+#setup a url " register "
+# In register views load 
+
+from django.contrib.auth.forms import UserCreationForm
+
+In register view method 
+
+
+
